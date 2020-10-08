@@ -1,0 +1,354 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, nav, .head {
+  font-family: Teko, sans-serif;
+}
+
+.sooraj_jpg{
+  position: absolute;
+  top: 5px;
+  right: 200px;
+  width: 80px; /* 横幅 */
+  height: 80px; /* 高さ */
+  background-size: cover;
+  background-position: center;
+  background-image: url(sooraj.JPG);
+  margin: auto;
+}
+.head{
+	width: 100%;
+  height: 90px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-title{
+  width: 400px;
+  height: 70px;
+  padding: 10px 0;
+  margin: auto;
+  font-size: 20px;
+}
+.title{
+  color: #FFF;
+  text-align: center;
+}
+
+.header-space {
+  position: absolute;
+  top: 19px;
+  right: 100px;
+}
+
+.insta_btn {
+  display: inline-block;
+  text-align: center;/*中央揃え*/
+  color: #2e6ca5;/*文字色*/
+  text-decoration: none;/*下線消す*/
+}
+
+.insta_btn:hover {/*ホバー時*/
+  color:#668ad8;/*文字色*/
+  transition: .5s;/*ゆっくり変化*/
+}
+
+.insta_btn .insta{/*アイコンの背景*/
+  position: relative;/*相対配置*/
+  display: inline-block;
+  width: 45px;/*幅*/
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  border-radius: 13px;/*角丸に*/
+
+}
+
+.insta_btn .insta:before{/*グラデーションを重ねるため*/
+  content: '';
+  position: absolute;/*絶対配置*/
+  top: 23px;/*ずらす*/
+  left: -18px;/*ずらす*/
+  width: 60px;/*グラデーションカバーの幅*/
+  height: 60px;/*グラデーションカバーの高さ*/
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+}
+
+.insta_btn .fa-instagram {/*アイコン*/
+  color: #FFF;/*白に*/
+  position: relative;/*z-indexを使うため*/
+  z-index: 2;/*グラデーションより前に*/
+  font-size: 50px;/*アイコンサイズ*/
+  line-height: 0.1px;/*高さと合わせる*/
+}
+
+.header-nav{
+  width: 100%;
+  height: 90px
+}
+
+div.header-nav{
+  background-color: #000
+}
+
+.nav_list{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header_menu{
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.main-visual {
+  width: 100%; /* 横幅 */
+  height: 800px; /* 高さ */
+  background-image: url(IMG_5918.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.space{
+  padding: 100px 0;
+}
+.main-visual-content{
+  width: 400px; /* 横幅を指定 */
+  height: 200px; /* 親の高さに揃える */
+  padding: 10px 0;
+  margin: auto;
+  background-color: rgba( 0, 0, 0, 0.5);
+}
+
+.main-visual-content-history{
+  width: 70%; /* 横幅を指定 */
+  height: 500px; /* 親の高さに揃える */
+  padding: 10px 0;
+  margin: 65px auto;
+  background-color: rgba( 0, 0, 0, 0.5);
+}
+
+.main-visual-content-location{
+  width: 30%; /* 横幅を指定 */
+  /*height: 620px; 親の高さに揃える */
+  /*padding: 10px 0;*/
+  margin: 65px 30px;
+  background-color: rgba( 0, 0, 0, 0.5);
+}
+
+.location-text{
+  padding: 5px 20px 20px 20px;
+  margin: 0 auto;
+  color: #FFF;
+  /*text-align: center;*/
+}
+
+.location-text-title{
+  padding: 30px 20px 20px 20px;
+  margin: 0 auto;
+  color: #FFF;
+  /*text-align: center;*/
+}
+
+.location-text-store_name{
+  padding: 5px 0;
+  margin: 0 auto;
+  color: #FFF;
+  text-align: center;
+}
+
+p.location-text-store_name{
+  padding: 5px 0px 20px 0px;
+}
+
+.main-visual-content-menu-left-1{
+  width: 400px; /* 横幅を指定 */
+  height: 200px; /* 親の高さに揃える */
+  float: left;
+  padding: 10px 0;
+  margin: 25px 25px 0 60px;
+  background-color: rgba( 0, 0, 0, 0.5);
+  background-image: url(IMG_6314.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.main-visual-content-menu-left-2{
+  width: 400px; /* 横幅を指定 */
+  height: 200px; /* 親の高さに揃える */
+  float: left;
+  padding: 10px 0;
+  margin: 25px;
+  background-color: rgba( 0, 0, 0, 0.5);
+  background-image: url(IMG_6315.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.main-visual-content-menu-left-3{
+  width: 400px; /* 横幅を指定 */
+  height: 200px; /* 親の高さに揃える */
+  float: left;
+  padding: 10px 0;
+  margin: 25px;
+  background-color: rgba( 0, 0, 0, 0.5);
+  background-image: url(IMG_6316.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  width: 100%; /* 横幅いっぱい */
+  height: 800px; /* 高さ1400px（多めに設定） */
+  background-color: 0,0,0,0; /* 背景色clear */
+}
+
+.menu-body{
+  width: 100%;
+  height: 800px;
+}
+
+p.head{
+  display:inline-block;
+  color: #FFF
+}
+
+
+.footer {
+  width: 100%;
+  padding: 30px 0;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 0; /*下に固定*/
+}
+
+
+.et-hero-tabs,
+.et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    position: relative;
+    background: #eee;
+        text-align: center;
+        padding: 0 2em;
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+        margin: 0 0 0 20px;
+    }
+}
+
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+    &--top {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 0.8rem;
+      &:hover {
+            color:white;
+      background: rgba(102,177,241,0.8);
+            transition: all 0.5s ease;
+    }
+}
+
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease;
+}
+
+#tab-es6{
+  background-image: url(IMG_6314.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#tab-flexbox{
+  background-image: url(IMG_6315.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#tab-react{
+  background-image: url(IMG_6316.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 800px) {
+    .et-hero-tabs,
+    .et-slide {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    }
+    .et-hero-tab {
+        font-size: 1rem;
+    }
+}
