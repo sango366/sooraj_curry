@@ -7,24 +7,22 @@
     <script src="https://kit.fontawesome.com/8416b26b5e.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
   </head>
-
-  <body>
-    <header>
-      <div class="header-nav">
-        <div class="header-title">
-          <h1 class="title">Sooraj Curry</h1>
+    <header class="test-header">
+        <div class="test-title">
+          <h1 class="curry">Sooraj Curry</h1><img src="/assets/sooraj.JPG" alt="サイトタイトル" width="90" height="88">
+        <!--<div class="insta">
+          <div class="insta-space">
+          <a href='https://instagram.com/sooraj_curry?igshid=gjnq5gih1s83' >
+   <i class="fa fa-instagram fa-4x"></i>
+          </a>
+        </div> -->
         </div>
-        <i class="sooraj_jpg"></i>
-          <div class="header-space">
-            <a href='https://instagram.com/sooraj_curry?igshid=gjnq5gih1s83' class="insta_btn">
-              <span class="insta">
-   　　          <i class="fa fa-instagram"></i>
-              </span>
-            </a>
-          </div>
       </div>
     </header><!-- /header -->
+
+  <body>
     <%= yield %>
     </div><!--main-visual.html.erbのdivを閉じている。こうすることで、footerが上に行かなくなる。 -->
 

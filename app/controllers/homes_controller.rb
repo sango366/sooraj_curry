@@ -9,7 +9,7 @@ class HomesController < ApplicationController
 	def history
 	end
 
-	def memu
+	def colleciton
 	end
 
 	def location

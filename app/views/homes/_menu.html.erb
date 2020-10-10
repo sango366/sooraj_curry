@@ -20,18 +20,30 @@
 
   <!-- Main -->
   <main class="et-main">
-    <section class="et-slide" id="tab-es6">
-      <h1>ES6</h1>
-      <h3>something about es6</h3>
-    </section>
-    <section class="et-slide" id="tab-flexbox">
-      <h1>Flexbox</h1>
-      <h3>something about flexbox</h3>
-    </section>
-    <section class="et-slide" id="tab-react">
-      <h1>React</h1>
-      <h3>something about react</h3>
-    </section>
+    <%= link_to '/details/show' do %>
+      <section class="et-slide" id="tab-es6">
+        <div class="main-visual-content">
+          <h2>ネパールチキンカレー <br>& <br>鯖キーマ</h2>
+          <h2>show more☜</h2>
+        </div>
+      </section>
+    <% end %>
+    <%= link_to '/details/show2' do %>
+      <section class="et-slide" id="tab-flexbox">
+        <div class="main-visual-content">
+          <h2>比内地鶏白湯チキンカレー<br>&<br>熟成バルサミコの三元豚ビンダルー</h2>
+          <h2>show more☜</h2>
+        </div>
+      </section>
+    <% end %>
+    <%= link_to '/details/show3' do %>
+      <section class="et-slide" id="tab-react">
+        <div class="main-visual-content">
+          <h2>ネパールチキンカレー<br>&<br>鯖キーマ</h2>
+          <h2>show more☜</h2>
+        </div>
+      </section>
+    <% end %>
     <section class="et-slide" id="tab-angular">
       <h1>comming soon...</h1>
       <!--<h3>something about angular</h3> -->

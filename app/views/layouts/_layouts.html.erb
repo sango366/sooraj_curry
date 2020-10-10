@@ -1,8 +1,9 @@
-<nav>
-    <ul class=nav_list>
-        <li class="header_menu"><%= link_to "top", root_path %></li>
-        <li class="header_menu"><%= link_to "home", homes_index_path %></li>
-		<li class="header_menu"><%= link_to "history", homes_history_path %></li>
-		<li class="header_menu"><%= link_to "menu", homes_menu_path %></li>
-		<li class="header_menu"><%= link_to "location & access", homes_location_path %></li>
-</nav>
+<label for="menu">Click me!!</label>
+<input type="checkbox" id="menu">
+    <ul class="dropdown">
+        <li><%= link_to "top", root_path %></li>
+        <li><%= link_to "home", homes_index_path %></li>
+		<li><%= link_to "history", homes_history_path %></li>
+		<li><%= link_to "collection", homes_collection_path %></li>
+		<li><%= link_to "location & access", homes_location_path %></li>
+	</ul>
