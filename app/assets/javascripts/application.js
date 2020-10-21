@@ -12,8 +12,9 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+//= require jquery
+//= require rails-ujs
 
 class StickyNavigation {
     
@@ -90,3 +91,14 @@ class StickyNavigation {
 }
 
 new StickyNavigation();
+
+$(function(){
+  $('.single-item').slick({
+    accessibility: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    dots: true,
+    fade: true,
+  });
+});
+

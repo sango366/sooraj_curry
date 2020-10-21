@@ -1,22 +1,46 @@
+<!--
 <nav>
-    <ul class=nav_list>
+    <ul id="menu">
         <li class="header_menu"><%= link_to "top", root_path %></li>
         <li class="header_menu"><%= link_to "home", homes_index_path %></li>
 		<li class="header_menu"><%= link_to "history", homes_history_path %></li>
 		<li class="header_menu"><%= link_to "collection", homes_collection_path %></li>
-		<li class="header_menu"><%= link_to "location & access", homes_location_path %></li>
+		<li class="header_menu"><%= link_to "location&access", homes_location_path %></li>
 </nav>
 
-<label for="menu">Click me!!</label>
-<input type="checkbox" id="menu">
-    <ul class="dropdown">
-        <li><%= link_to "top", root_path %></li>
-        <li><%= link_to "home", homes_index_path %></li>
-		<li><%= link_to "history", homes_history_path %></li>
-		<li><%= link_to "collection", homes_collection_path %></li>
-		<li><%= link_to "location & access", homes_location_path %></li>
-	</ul>
+-->
 
+<div class="hhh"></div>
+  <ul id="menu">
+    <li><a href="javascript:void(0);" onclick="var ok=confirm('Topページに戻りますか？');
+if (ok) location.href='/'; return false;">Top</a>
+  </ul>
+  <ul id="menu">
+    <li><a href="#">Menu</a>
+      <ul>
+        <li><a href="index">Home</a></li>
+        <li><a href="history">History</a></li>
+        <li><a href="collection">Colleciton</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul id="menu">
+    <li><a href="#">Contact</a>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="var ok=confirm('Instagramに移動しますか？');
+if (ok) location.href='https://instagram.com/sooraj_curry?igshid=gjnq5gih1s83'; return false;">Instagram</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul id="menu">
+    <li><a href="#">Access</a>
+      <ul>
+        <li><a href="location">Location</a></li>
+        <li><a href="javascript:void(0);" onclick="var ok=confirm('Google Mapに移動しますか？');
+if (ok) location.href='https://www.google.com/maps?q=%E3%80%92150-0047+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E5%B1%B1%E7%94%BA%EF%BC%91%EF%BC%96%E2%88%92%EF%BC%94+%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%A1%E3%83%88%E3%83%AD%E3%83%9D%E3%83%AA%E3%82%B9+2A+Craftbeer+Gau%27s&ftid=0x60188cac5a291515:0x11465468c72ea2c9&hl=ja-JP&gl=jp&shorturl=1'; return false;">Google Map</a></li>
+      </ul>
+    </li>
+  </ul>
 	<!-- label,
 li{
   display:block;
@@ -29,3 +53,4 @@ li{
 
   backbroundをbackground-color: rgba(255, 255, 255, 0.2);に変える。
   checkを変える。
+  -->

@@ -14,6 +14,176 @@
  *= require_self
  */
 
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  height: 500px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}
+
+.aaa{
+  background-image: url(IMG_6314.JPG);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+@mixin position-center($text-align: center) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: $text-align;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+}
+
+.loading-text {
+    @include position-center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #fff;
+        font-size: 27px;
+    font-family: 'Quattrocento Sans', sans-serif;
+        @for $i from 0 through 11 {
+            &:nth-child(#{$i + 1}) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (#{$i/5})+s infinite linear alternate;
+            }
+        }
+    }
+}
+
+@keyframes blur-text {
+    0% {filter: blur(0px);}
+    100% {filter: blur(4px);}
+}
+
+
+.hhh{
+  width:20%;
+  float:right;
+  height: 48px;
+   background-color: rgba(255, 255, 255, 0.3);
+}
+
+#menu{
+  float: left;
+  list-style-type: none;
+  width: 20%;
+  height: 48px;
+  margin-left: auto;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#menu li{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#menu li a{
+  display: block;
+  margin: 0;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  height: 48px;
+}
+
+
+#menu li ul{
+  list-style: none;
+}
+
+/*
+
+#menu li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+    padding: 0;
+}
+
+#menu li:last-child ul{
+  left: -100%;
+  width: 100%
+}
+*/
+
+#menu li ul li{
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  color: rgba(255, 255, 255, 0.2);
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+#menu li ul li a{
+  padding: 12px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+}
+#menu li:hover > a{
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Corben', cursive;
+}
+
+#menu li:hover ul li{
+  overflow: visible;
+  height: 48px;
+  border-bottom: 1px solid #fff;
+}
+#menu li:hover ul li:first-child{
+  border-top: 0;
+}
+#menu li:hover ul li:last-child{
+  border-bottom: 0;
+}
+
+
+
 .test-header{
   width: 100%;
   height: 90px;
@@ -101,6 +271,7 @@ h6{
   background-image: url(sooraj.JPG);
   margin: auto;
 }
+
 .head{
 	width: 100%;
   height: 90px;
@@ -138,49 +309,6 @@ div.header-nav{
   background-color: #000
 }
 
-.dropdown{
-  display:none;
-}
-
-label,
-li{
-  display:block;
-  padding:2em;
-  background:gold;
-  border-bottom:#fff 1px solid;
-  font-family:sans-serif;
-  letter-spacing:.05em;
-  font-weight:bold;
-}
-li:hover,
-label:hover{
-  background:orange;
-}
-li::before,
-label::before{
-  content:"";
-  display:block;
-  position:absolute;
-  right:5%;
-  width:.5em;
-  height:.5em;
-  border-top:#000 2px solid;
-  border-left:#000 2px solid;
-  transform:rotate(135deg);
-}
-input[type="checkbox"]{
-  display:none;
-}
-label[for="menu"]{
-  display:block;
-  background:orange;
-}
-label[for="menu"]::before{
-  transform:rotate(225deg);
-}
-#menu:checked + .dropdown{
-  display:block;
-}
 
 
 .nav_list{
@@ -191,6 +319,7 @@ label[for="menu"]::before{
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .header_menu{
   list-style: none;
   text-decoration: none;
@@ -216,9 +345,9 @@ a {
   padding: 100px 0;
 }
 .main-visual-content{
-  width: 50%; /* 横幅を指定 */
+  width: 40%; /* 横幅を指定 */
   height: 200px; /* 親の高さに揃える */
-  padding: 10px 0;
+  padding: 20px 0;
   margin: auto;
   background-color: rgba( 0, 0, 0, 0.5);
 }
@@ -232,10 +361,10 @@ a {
 }
 
 .main-visual-content-location{
-  width: 30%; /* 横幅を指定 */
+  width: 50%; /* 横幅を指定 */
   /*height: 620px; 親の高さに揃える */
   /*padding: 10px 0;*/
-  margin: 65px 30px;
+  margin: 0px 30px;
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
@@ -264,8 +393,6 @@ p.location-text-store_name{
   padding: 5px 0px 20px 0px;
 }
 
-
-
 .main {
   width: 100%; /* 横幅いっぱい */
   height: 800px; /* 高さ1400px（多めに設定） */
@@ -285,30 +412,26 @@ p.head{
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
-.show{
-  height: 450px; /* 親の高さに揃える */
-  margin: 15px 30px;
-  margin-top: 70px;
-  background-color: red;
-  position: relative;
+.show {
+    width: 90%;
+    height: 450px;
+    margin: 0px auto;
+    margin-top: 70px;
+    background-color: red;
+    position: relative;
 }
 
 .show-show{
-  width: 50%; /* 横幅を指定 */
-  height: 450px; /* 親の高さに揃える */
-  background-image: url(IMG_6314.JPG);
+  width: 100%; /* 横幅を指定 */
+  height: 250px; /* 親の高さに揃える */
   background-size: cover;
   background-position: center;
-  position: absolute;
-  left: 0;
 }
 
 .show-introduction{
-  width: 50%; /* 横幅を指定 */
-  height: 450px; /* 親の高さに揃える */
+  width: 100%; /* 横幅を指定 */
+  height: 200px; /* 親の高さに揃える */
   background-color: #fff;
-  position: absolute;
-  right: 0;
 }
 
 .show-title{
@@ -442,6 +565,15 @@ p.head{
 }
 
 @media (max-width: 375px) {
+  .space {
+    padding: 100px 0 0 0;
+  }
+  .main-visual-content {
+    width: 80%;
+  }
+  .main-visual-content-location{
+    margin-top: 100px;
+  }
     .et-slide {
     height: 20vh;
   }
@@ -465,10 +597,30 @@ p.head{
     text-align: left;
     }
   h6{
-  font-size: 1px;
+  font-size: 12px;
 }
+  .main-visual-content-location {
+    width: 80%;
+    }
+  #menu li a {
+    font-size: 18px;
+    }
+  #menu li ul li a{
+  font-size: 18px;
+    }
+#menu li:hover > a{
+  font-size: 18px;
+  font-weight: bold;
+  }
 }
+
 @media (min-width:376px) and(max-width: 425px) {
+  .space {
+    padding: 80px 0 0 0;
+  }
+  .main-visual-content {
+    width: 80%;
+  }
   h1.curry{
     font-size: 25px;
     }
@@ -484,9 +636,26 @@ p.head{
   .nav_list {
     text-align: left;
     }
+  .main-visual-content-location {
+    width: 80%;
+    }
+  #menu li a {
+    font-size: 18px;
+  }
+  #menu li ul li a{
+  font-size: 18px;
+  }
+#menu li:hover > a{
+  font-size: 18px;
+  font-weight: bold;
+  }
 }
 
+
 @media (min-width:426px) and(max-width: 767px) {
+  .space {
+    padding: 80px 0 0 0;
+    }
   h1.curry{
     font-size: 40px;
     }
@@ -500,9 +669,28 @@ p.head{
   .nav_list {
     text-align: left;
     }
+  .main-visual-content-location {
+    width: 80%;
+    }
+  #menu li a {
+    font-size: 18px;
+    }
+  #menu li ul li a{
+  font-size: 18px;
+    }
+  #menu li:hover > a{
+  font-size: 18px;
+  font-weight: bold;
+  }
 }
 
-@media (min-width:768px) and(max-width: 2000px) {
+  @media (min-width:768px) and(max-width: 1023px) {
+  .space {
+    padding: 160px 0 0 0;
+    }
+}
+
+@media (min-width:1024px) and(max-width: 2000px) {
   h1.curry{
     font-size: 40px;
     }

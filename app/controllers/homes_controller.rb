@@ -3,6 +3,9 @@ class HomesController < ApplicationController
 	def home
 	end
 
+	def start
+	end
+
 	def index
 	end
 
