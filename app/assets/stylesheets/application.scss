@@ -206,46 +206,17 @@
   float: left;
 }
 
-.icon{
-  width: 40%; /* 横幅 */
-  height: 90px; /* 高さ */
-  margin: 0 0 0 auto;
-  float: right;
-  background-size: 50% 100%;
-  background-position: center right;
-  background-image: url(sooraj.JPG);
-  margin: auto;
-  position: relative;
-}
-
-/*
-
-.insta{
-  width: 50%;
-  height: 90px;
-  margin: 0 0 0 auto;
-  padding: 20px 0;
-  background-color: #000;
-  float: right;
-}
-
-.insta-space{
-  padding: 0px 0px 0px 40px;
-}
-
-*/
-
  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header, nav, .head {
+header, nav, .head{
   font-family:  "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-h1.curry{
+h1.curry, .head-history, .location-text{
   color: #fff;
   font-family:  "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
@@ -278,6 +249,14 @@ h6{
   padding: 20px 0;
   margin: 0 auto;
   text-align: center;
+}
+
+.head-history{
+  width: 100%;
+  height: 90px;
+  padding: 10px 5px;
+  margin: 0 auto;
+  font-size:15px;
 }
 
 .header-title{
@@ -353,18 +332,18 @@ a {
 }
 
 .main-visual-content-concept{
-  width: 50%; /* 横幅を指定 */
+  width: 90%; /* 横幅を指定 */
   /*height: 620px; 親の高さに揃える */
-  /*padding: 10px 0;*/
-  margin: 0px auto;
+  padding: 20px 0;
+  margin: 100px auto;
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
 .main-visual-content-history{
-  width: 70%; /* 横幅を指定 */
-  height: 500px; /* 親の高さに揃える */
-  padding: 10px 0;
-  margin: 65px auto;
+  width: 90%; /* 横幅を指定 */
+  height: 450px; /* 親の高さに揃える */
+  padding: 5px 0;
+  margin: 100px auto;
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
@@ -407,7 +386,7 @@ p.location-text-store_name{
   background-color: 0,0,0,0; /* 背景色clear */
 }
 
-p.head{
+p.head, .head-history{
   display:inline-block;
   color: #FFF
 }
@@ -463,115 +442,6 @@ p.head{
   bottom: 0; /*下に固定*/
 }
 
-
-.et-hero-tabs{
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    position: relative;
-    background: #eee;
-        text-align: center;
-        padding: 0 2em;
-    h1 {
-        font-size: 2rem;
-        margin: 0;
-        letter-spacing: 1rem;
-    }
-    h3 {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        opacity: 0.6;
-        margin: 0 0 0 20px;
-    }
-}
-.et-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px auto;
-    width: 60%;
-    height: 80vh;
-    position: relative;
-    background: #eee;
-        text-align: center;
-        padding: 0 2em;
-    h2 {
-        font-size: 1rem;
-        margin: 0;
-        letter-spacing: 1rem;
-        opacity: 0.6;
-        margin: 20px 0 0 0;
-    }
-    h1 {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        opacity: 0.6;
-        margin: 0 0 0 20px;
-    }
-}
-
-.et-hero-tabs-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    z-index: 10;
-    &--top {
-        position: fixed;
-        top: 0;
-    }
-}
-
-.et-hero-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    color: #000;
-    letter-spacing: 0.1rem;
-        transition: all 0.5s ease;
-        font-size: 0.8rem;
-      &:hover {
-            color:white;
-      background: rgba(102,177,241,0.8);
-            transition: all 0.5s ease;
-    }
-}
-
-.et-hero-tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #66B1F1;
-    transition: left 0.3s ease;
-}
-
-#tab-es6{
-  background-image: url(IMG_6314.JPG);
-  background-size: cover;
-  background-position: center;
-}
-
-#tab-flexbox{
-  background-image: url(IMG_6315.JPG);
-  background-size: cover;
-  background-position: center;
-}
-
-#tab-react{
-  background-image: url(IMG_6316.JPG);
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 375px) {
   .space {
     padding: 100px 0 0 0;
@@ -620,6 +490,9 @@ p.head{
   font-size: 18px;
   font-weight: bold;
   }
+  .main-visual-content-history{
+  height: 590px; /* 親の高さに揃える */
+}
 }
 
 @media (min-width:376px) and(max-width: 425px) {
@@ -657,6 +530,9 @@ p.head{
   font-size: 18px;
   font-weight: bold;
   }
+.main-visual-content-history{
+  height: 550px; /* 親の高さに揃える */
+}
 }
 
 
@@ -690,12 +566,20 @@ p.head{
   font-size: 18px;
   font-weight: bold;
   }
+  .main-visual-content-history{
+  height: 550px; /* 親の高さに揃える */
+}
 }
 
   @media (min-width:768px) and(max-width: 1023px) {
   .space {
     padding: 160px 0 0 0;
     }
+
+  .main-visual-content-concept{
+  width: 50%;
+  margin: 100px auto
+}
 }
 
 @media (min-width:1024px) and(max-width: 2000px) {
@@ -705,4 +589,8 @@ p.head{
   .curry {
     padding: 20px 0;
     }
+  .main-visual-content-concept{
+    width: 50%;
+    margin: 100px auto
+  }
 }
